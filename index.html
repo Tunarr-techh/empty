@@ -23,11 +23,13 @@
                 <span></span>
            </div>
         </div>
-        <nav class="nav">
-            <a href="">Ana Səyfə</a>
-            <a href="">Layihə haqqında</a>
-            <a href="">Bizə kömək</a>
-        </nav>
+        <div class="contain-nav">
+            <nav class="nav">
+                <a href="">Ana Səyfə</a>
+                <a href="">Layihə haqqında</a>
+                <a href="">Bizə kömək</a>
+            </nav>
+        </div>
     </div>
     <div class="container">
         <div class="vector-img">
@@ -51,6 +53,11 @@
                     <img src="img/css3.png" alt="" width="30" height="34" style="margin-right: 10px;">
                     <img src="img/js.png" alt="" width="30" height="34">
                 </div>
+                <div class="start-button">
+                    <a class="start-btn" href="">
+                        Öyrənməyə başla
+                    </a>
+                </div>
             </div>
             <div class="img-box">
                 <img src="img/main_page_vector.png" id="img2" alt="" width="230" height="230">
@@ -59,6 +66,9 @@
     </div>
 </section>
 
+<section id="section-2">
+    
+</section>
 
 
 
@@ -73,9 +83,18 @@
 $(document).ready(function(){
     $(".hamburger-menu").click(function(){
         $(this).toggleClass("active");
-        $(".nav").slideToggle().css({
-            display: "flex"
-        });
+        $(".contain-nav").toggleClass("active2")
+        if($(".contain-nav").hasClass("active2")) {
+            $("body").css({
+                overflowX: "hidden",
+                overflowY: "hidden"
+            })
+        }else{
+            $("body").css({
+                overflowX: "hidden",
+                overflowY: "auto"
+            })
+        }
     });
 });
 
