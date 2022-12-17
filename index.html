@@ -25,19 +25,19 @@
         </div>
         <div class="contain-nav">
             <nav class="nav">
-                <a href="">Ana Səyfə</a>
-                <a href="">Layihə haqqında</a>
+                <a href="#section-1">Ana Səyfə</a>
+                <a href="#section-2">Layihə haqqında</a>
                 <a href="">Bizə kömək</a>
             </nav>
         </div>
     </div>
-    <div class="container">
-        <div class="vector-img">
-            <img src="img/vector1.png" id="img1" alt="" width="200" height="200">
-        </div>
-        <div class="vector-img-2">
-            <img src="img/vector2.png" alt="" width="200" height="200">
-        </div>
+    <div class="vector-img">
+        <img src="img/vector1.png" id="img1" alt="" width="200" height="200">
+    </div>
+    <div class="vector-img-2">
+        <img src="img/vector2.png" alt="" width="200" height="200">
+    </div>
+    <div class="section container">
         <div class="rows">
             <div class="text-container" id="txt-container">
                 <h1>
@@ -67,19 +67,80 @@
 </section>
 
 <section id="section-2">
-    
+    <div class="vector-img1">
+        <img src="img/vector2.png" alt="" width="155" height="155">
+    </div>
+    <div class="head-txt">
+        Layihə haqqında
+    </div>
+    <div class="section container-2">
+        <div class="box-groups">
+            <div class="box box-1">
+                <div class="heading-txt">
+                    Video Təlimat
+                </div>
+                <div class="main-txt" style="text-align: center;">
+                    Siz bu səyfədə video təlimatlardanda faydalana bilərsiniz.
+                    Video təlimatlar tamamilə Azərbaycan dilində.
+                </div>
+                <div class="vector-box">
+                    <img src="img/play_vector.png" alt="" width="130" height="130">
+                </div>
+            </div>
+            <div class="box box-2">
+                <div class="heading-txt">
+                    Quizlər
+                </div>
+                <div class="main-txt txt-2" style="text-align: center;">
+                    Siz öyrənməklə yanaşıda öyrəndiklərinizi sınamaq, yoxlamaq üçün
+                    Quizlər bölümündəndə faydalana bilərsiniz.
+                </div>
+                <div class="vector-box">
+                    <img src="img/star_vector.png" alt="" width="130" height="130" style="transform: translateY(-5px);">
+                </div>
+            </div>
+            <div class="box box-3">
+                    <div class="heading-txt">
+                        Online Code Editor
+                    </div>
+                    <div class="main-txt txt-2" style="text-align: center;">
+                        Siz yeni kodlar öyrəndiyiniz zaman praktik etmək üçün Veb
+                         səhifəmizdəki <span style="color: #4457ffce;">Online Code Editor</span>'dan istifadə edə bilərsiniz.
+                    </div>
+                    <div class="vector-box">
+                        <img src="img/code_vector.png" alt="" width="130" height="130">
+           </div>
+        </div>
+    </div>
 </section>
-
-
-
-
-
-
-
+<section id="section-3">
+    <div class="section contact-container">
+        
+    </div>
+   <div class="wrap">
+        <div class="top-plane"></div>
+      </div>
+</section>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
+
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+        else {
+            entry.target.classList.remove("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".section");
+hiddenElements.forEach((el) => observer.observe(el));
+
 $(document).ready(function(){
     $(".hamburger-menu").click(function(){
         $(this).toggleClass("active");
@@ -96,16 +157,28 @@ $(document).ready(function(){
             })
         }
     });
+    $(".nav a").click(function(){
+        $(".contain-nav").removeClass("active2");
+        $("body").css({
+            overflowY: "auto"
+        })
+    });
 });
+
+
 
 let i = 0;
     let interval = setInterval(() => {
         if (i == 2) {
-                let img1 = document.getElementById("img1");
-                img1.style.transform = "scale(1)";
-
                 let img2 = document.getElementById("img2");
                 img2.style.transform = "scale(1)";
+                img2.classList.add("edit2")
+
+
+                let img1 = document.getElementById("img1");
+                img1.style.transform = "scale(1)";
+                img1.classList.add("edit1")
+
 
                 let textContainer = document.getElementById("txt-container");
                 textContainer.style.opacity = "1";
