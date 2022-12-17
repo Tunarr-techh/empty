@@ -4,190 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link Css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-    <!-- Fonts -->
-    <title>Document</title>
+    <title>Indi Yüklə</title>
 </head>
+    <style>
+        body  {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #222;
+            color: #fff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid green;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        .container {
+            display: flex;
+            width: auto;
+            align-items: center;
+            width: 800px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 7px 14px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            text-decoration: none;
+            font-style: italic;
+            transition: 700ms all;
+            border-radius: 15px;
+            font-weight: 600;
+            background-color: #fff;
+            color: #222;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
 <body>
-    <div class="loading" id="loading"></div>
-<section id="section-1">
-    <div class="header">
-        <div class="logo">
-           <h4>T3SCHOOLS</h4> 
-           <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-           </div>
+    <h1>Layiheler</h1>
+    <div class="container">
+        <div class="box bx1">
+            Dashboard Template
+            <a href="Dashboard.rar" class="btn" download="Dashboard">Yüklə</a>
         </div>
-        <div class="contain-nav">
-            <nav class="nav">
-                <a href="#section-1">Ana Səyfə</a>
-                <a href="#section-2">Layihə haqqında</a>
-                <a href="">Bizə kömək</a>
-            </nav>
+        <div class="box bx2">
+            Neyman Tech Template
+            <a href="NeymanTechProject.rar" class="btn" download="NeymanTechProject">Yüklə</a>
         </div>
-    </div>
-    <div class="vector-img">
-        <img src="img/vector1.png" id="img1" alt="" width="200" height="200">
-    </div>
-    <div class="vector-img-2">
-        <img src="img/vector2.png" alt="" width="200" height="200">
-    </div>
-    <div class="section container">
-        <div class="rows">
-            <div class="text-container" id="txt-container">
-                <h1>
-                    Proqramlaşdırma,
-                    İnformatika
-                </h1>
-                <p style="color: #222; margin-top: 10px;" class="small-txt">Tək bir Veb Səhifədə.</p>
-                <p class="target">
-                    Öyrən,kodla,yarat.
-                </p>
-                <div class="img-box-2">
-                    <img src="img/html5.png" alt="" width="30" height="34" style="margin-right: 10px;">
-                    <img src="img/css3.png" alt="" width="30" height="34" style="margin-right: 10px;">
-                    <img src="img/js.png" alt="" width="30" height="34">
-                </div>
-                <div class="start-button">
-                    <a class="start-btn" href="">
-                        Öyrənməyə başla
-                    </a>
-                </div>
-            </div>
-            <div class="img-box">
-                <img src="img/main_page_vector.png" id="img2" alt="" width="230" height="230">
-            </div>
+        <div class="box bx3">
+             Quiz
+            <a href="QuizGame.rar" class="btn" download="QuizGame">Yüklə</a>
         </div>
-    </div>
-</section>
-
-<section id="section-2">
-    <div class="vector-img1">
-        <img src="img/vector2.png" alt="" width="155" height="155">
-    </div>
-    <div class="head-txt">
-        Layihə haqqında
-    </div>
-    <div class="section container-2">
-        <div class="box-groups">
-            <div class="box box-1">
-                <div class="heading-txt">
-                    Video Təlimat
-                </div>
-                <div class="main-txt" style="text-align: center;">
-                    Siz bu səyfədə video təlimatlardanda faydalana bilərsiniz.
-                    Video təlimatlar tamamilə Azərbaycan dilində.
-                </div>
-                <div class="vector-box">
-                    <img src="img/play_vector.png" alt="" width="130" height="130">
-                </div>
-            </div>
-            <div class="box box-2">
-                <div class="heading-txt">
-                    Quizlər
-                </div>
-                <div class="main-txt txt-2" style="text-align: center;">
-                    Siz öyrənməklə yanaşıda öyrəndiklərinizi sınamaq, yoxlamaq üçün
-                    Quizlər bölümündəndə faydalana bilərsiniz.
-                </div>
-                <div class="vector-box">
-                    <img src="img/star_vector.png" alt="" width="130" height="130" style="transform: translateY(-5px);">
-                </div>
-            </div>
-            <div class="box box-3">
-                    <div class="heading-txt">
-                        Online Code Editor
-                    </div>
-                    <div class="main-txt txt-2" style="text-align: center;">
-                        Siz yeni kodlar öyrəndiyiniz zaman praktik etmək üçün Veb
-                         səhifəmizdəki <span style="color: #4457ffce;">Online Code Editor</span>'dan istifadə edə bilərsiniz.
-                    </div>
-                    <div class="vector-box">
-                        <img src="img/code_vector.png" alt="" width="130" height="130">
-           </div>
+        <div class="box bx4">
+            Kok hesablama
+            <a href="USTUKVADRAT.rar" class="btn" download="USTUKVADRAT">Yüklə</a>
         </div>
+
     </div>
-</section>
-<section id="section-3">
-    <div class="section contact-container">
-        
-    </div>
-   <div class="wrap">
-        <div class="top-plane"></div>
-      </div>
-</section>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-
-
-const observer = new IntersectionObserver((entries) => {
-entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-        else {
-            entry.target.classList.remove("show");
-        }
-    });
-});
-
-const hiddenElements = document.querySelectorAll(".section");
-hiddenElements.forEach((el) => observer.observe(el));
-
-$(document).ready(function(){
-    $(".hamburger-menu").click(function(){
-        $(this).toggleClass("active");
-        $(".contain-nav").toggleClass("active2")
-        if($(".contain-nav").hasClass("active2")) {
-            $("body").css({
-                overflowX: "hidden",
-                overflowY: "hidden"
-            })
-        }else{
-            $("body").css({
-                overflowX: "hidden",
-                overflowY: "auto"
-            })
-        }
-    });
-    $(".nav a").click(function(){
-        $(".contain-nav").removeClass("active2");
-        $("body").css({
-            overflowY: "auto"
-        })
-    });
-});
-
-
-
-let i = 0;
-    let interval = setInterval(() => {
-        if (i == 2) {
-                let img2 = document.getElementById("img2");
-                img2.style.transform = "scale(1)";
-                img2.classList.add("edit2")
-
-
-                let img1 = document.getElementById("img1");
-                img1.style.transform = "scale(1)";
-                img1.classList.add("edit1")
-
-
-                let textContainer = document.getElementById("txt-container");
-                textContainer.style.opacity = "1";
-            clearInterval(interval);
-            document.getElementById("loading").style.display = "none";
-        }
-        i++;
-    }, 500);
-
-</script>
 </body>
 </html>
